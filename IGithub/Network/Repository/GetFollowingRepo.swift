@@ -1,51 +1,51 @@
 //
-//  GetUserRepositoriesRepo.swift
+//  GetFollowingRepo.swift
 //  IGithub
 //
-//  Created by Felix kariuki on 28/04/2024.
+//  Created by Felix kariuki on 15/05/2024.
 //
 
 import Foundation
 import Combine
 
-protocol GetUserRepositoriesRepo  {
+protocol GetFollowingRepo  {
 
-    func getUserRepositories(from endpoint: IGithubApiService) -> AnyPublisher<Repositories,APIError>
+    func getFollowing(from endpoint: IGithubApiService) -> AnyPublisher<Users,APIError>
 }
 
-struct GetUserRepositoriesRepoImpl : GetUserRepositoriesRepo {
+struct GetFollowingRepoImpl : GetFollowingRepo {
     
-    func getUserRepositories(from endpoint: IGithubApiService) -> AnyPublisher<Repositories, APIError> {
+    
+    func getFollowing(from endpoint: IGithubApiService) -> AnyPublisher<Users, APIError> {
         return URLSession
             .shared
             .dataTaskPublisher(for: endpoint.urlRequest)
             .receive(on: DispatchQueue.main)
             .mapError{_ in APIError.unknown}
-            .flatMap{data, response -> AnyPublisher<Repositories,APIError> in
-                
+            .flatMap{data, response -> AnyPublisher<Users,APIError> in
                 
                 guard let response = response as? HTTPURLResponse else {
                     return Fail(error: APIError.unknown).eraseToAnyPublisher()
                 }
                 
-                if (200...299).contains(response.statusCode){
+                if(200...299).contains(response.statusCode){
                     let jsonDecoder = JSONDecoder()
+                    
                     jsonDecoder.dateDecodingStrategy = .iso8601
                     
                     return Just(data)
-                        .decode(type:  Repositories.self, decoder: jsonDecoder)
+                        .decode(type:  Users.self, decoder: jsonDecoder)
                         .mapError { _ in APIError.decodingError }
                         .eraseToAnyPublisher()
-                    
                 }else {
-                    print("ERROR..... \(response.statusCode)   \(response.description)   \(endpoint.urlRequest)")
                     return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
                 }
-                
-                
+                    
             }
             .eraseToAnyPublisher()
+        
     }
     
     
 }
+

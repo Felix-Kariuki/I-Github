@@ -17,7 +17,6 @@
 		DC09ADB22BDAD2E2003CF79C /* nunito_extra_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC09ADAB2BDAD2E2003CF79C /* nunito_extra_bold.ttf */; };
 		DC09ADB32BDAD2E2003CF79C /* nunito_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC09ADAC2BDAD2E2003CF79C /* nunito_black.ttf */; };
 		DC09ADB62BDAD3A5003CF79C /* IGithubText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADB52BDAD3A5003CF79C /* IGithubText.swift */; };
-		DC09ADB82BDAD473003CF79C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADB72BDAD473003CF79C /* HomeView.swift */; };
 		DC09ADBA2BDADA3C003CF79C /* UserComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADB92BDADA3C003CF79C /* UserComponent.swift */; };
 		DC09ADBC2BDADC06003CF79C /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADBB2BDADC06003CF79C /* CircularImageView.swift */; };
 		DC09ADBF2BDAE286003CF79C /* FollowerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADBE2BDAE286003CF79C /* FollowerComponent.swift */; };
@@ -30,6 +29,14 @@
 		DC09ADD82BDE6851003CF79C /* IGithubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADD72BDE6851003CF79C /* IGithubApi.swift */; };
 		DC09ADDB2BDE6C11003CF79C /* RepositoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADDA2BDE6C11003CF79C /* RepositoriesState.swift */; };
 		DC09ADDD2BDE6CC2003CF79C /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC09ADDC2BDE6CC2003CF79C /* RepositoriesView.swift */; };
+		DCBCFCE82BF51F4A007A9464 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCE72BF51F4A007A9464 /* UserResponse.swift */; };
+		DCBCFCEA2BF5224F007A9464 /* GetUserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCE92BF5224F007A9464 /* GetUserRepo.swift */; };
+		DCBCFCEC2BF5225F007A9464 /* GetFollowersRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCEB2BF5225F007A9464 /* GetFollowersRepo.swift */; };
+		DCBCFCEE2BF5226E007A9464 /* GetFollowingRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCED2BF5226E007A9464 /* GetFollowingRepo.swift */; };
+		DCBCFCF02BF5276A007A9464 /* FollowingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCEF2BF5276A007A9464 /* FollowingState.swift */; };
+		DCBCFCF22BF527B9007A9464 /* GetFollowingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCF12BF527B9007A9464 /* GetFollowingViewModel.swift */; };
+		DCBCFCF42BF528CE007A9464 /* GetUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCF32BF528CE007A9464 /* GetUserViewModel.swift */; };
+		DCBCFCF62BF528E1007A9464 /* GetFollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBCFCF52BF528E1007A9464 /* GetFollowersViewModel.swift */; };
 		DCE27EF22BBF0D470065BB50 /* IGithubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27EF12BBF0D470065BB50 /* IGithubApp.swift */; };
 		DCE27EF62BBF0D490065BB50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE27EF52BBF0D490065BB50 /* Assets.xcassets */; };
 		DCE27EF92BBF0D490065BB50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCE27EF82BBF0D490065BB50 /* Preview Assets.xcassets */; };
@@ -77,7 +84,6 @@
 		DC09ADAB2BDAD2E2003CF79C /* nunito_extra_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nunito_extra_bold.ttf; sourceTree = "<group>"; };
 		DC09ADAC2BDAD2E2003CF79C /* nunito_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nunito_black.ttf; sourceTree = "<group>"; };
 		DC09ADB52BDAD3A5003CF79C /* IGithubText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGithubText.swift; sourceTree = "<group>"; };
-		DC09ADB72BDAD473003CF79C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DC09ADB92BDADA3C003CF79C /* UserComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserComponent.swift; sourceTree = "<group>"; };
 		DC09ADBB2BDADC06003CF79C /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		DC09ADBE2BDAE286003CF79C /* FollowerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerComponent.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 		DC09ADDA2BDE6C11003CF79C /* RepositoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesState.swift; sourceTree = "<group>"; };
 		DC09ADDC2BDE6CC2003CF79C /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		DC84C7422BD839B000BBDD29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCBCFCE72BF51F4A007A9464 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		DCBCFCE92BF5224F007A9464 /* GetUserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRepo.swift; sourceTree = "<group>"; };
+		DCBCFCEB2BF5225F007A9464 /* GetFollowersRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowersRepo.swift; sourceTree = "<group>"; };
+		DCBCFCED2BF5226E007A9464 /* GetFollowingRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowingRepo.swift; sourceTree = "<group>"; };
+		DCBCFCEF2BF5276A007A9464 /* FollowingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingState.swift; sourceTree = "<group>"; };
+		DCBCFCF12BF527B9007A9464 /* GetFollowingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowingViewModel.swift; sourceTree = "<group>"; };
+		DCBCFCF32BF528CE007A9464 /* GetUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserViewModel.swift; sourceTree = "<group>"; };
+		DCBCFCF52BF528E1007A9464 /* GetFollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFollowersViewModel.swift; sourceTree = "<group>"; };
 		DCE27EEE2BBF0D470065BB50 /* IGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE27EF12BBF0D470065BB50 /* IGithubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGithubApp.swift; sourceTree = "<group>"; };
 		DCE27EF52BBF0D490065BB50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				DC09ADCB2BDE654B003CF79C /* GetUserRepositoriesRepo.swift */,
+				DCBCFCE92BF5224F007A9464 /* GetUserRepo.swift */,
+				DCBCFCEB2BF5225F007A9464 /* GetFollowersRepo.swift */,
+				DCBCFCED2BF5226E007A9464 /* GetFollowingRepo.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				DC09ADDA2BDE6C11003CF79C /* RepositoriesState.swift */,
+				DCBCFCEF2BF5276A007A9464 /* FollowingState.swift */,
 			);
 			path = state;
 			sourceTree = "<group>";
@@ -308,6 +326,7 @@
 		DCE27F2A2BBF21480065BB50 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				DCBCFCE72BF51F4A007A9464 /* UserResponse.swift */,
 				DC09AD9E2BDACDE9003CF79C /* sample */,
 				DCE27F332BC172ED0065BB50 /* Repository.swift */,
 				DCE27F352BC172FE0065BB50 /* Owner.swift */,
@@ -331,6 +350,9 @@
 			isa = PBXGroup;
 			children = (
 				DC09ADC62BDE6456003CF79C /* RepositoriesViewModel.swift */,
+				DCBCFCF12BF527B9007A9464 /* GetFollowingViewModel.swift */,
+				DCBCFCF32BF528CE007A9464 /* GetUserViewModel.swift */,
+				DCBCFCF52BF528E1007A9464 /* GetFollowersViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -338,7 +360,6 @@
 		DCE27F302BC009AB0065BB50 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				DC09ADB72BDAD473003CF79C /* HomeView.swift */,
 				DC09ADC02BDAE776003CF79C /* UserProfileView.swift */,
 				DC09ADC22BDAE786003CF79C /* FollowersView.swift */,
 				DC09ADC42BDAE793003CF79C /* FollowingView.swift */,
@@ -493,9 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC09ADA42BDAD274003CF79C /* Fonts.swift in Sources */,
+				DCBCFCF02BF5276A007A9464 /* FollowingState.swift in Sources */,
 				DCE27F3C2BC176F60065BB50 /* URLRequestCurl.swift in Sources */,
 				DCE27F232BBF18D20065BB50 /* NetworkError.swift in Sources */,
-				DC09ADB82BDAD473003CF79C /* HomeView.swift in Sources */,
 				DCE27F292BBF206A0065BB50 /* NetworkRequestImpl.swift in Sources */,
 				DC09ADC12BDAE776003CF79C /* UserProfileView.swift in Sources */,
 				DCE27F362BC172FE0065BB50 /* Owner.swift in Sources */,
@@ -503,14 +524,21 @@
 				DCE27F252BBF1C430065BB50 /* HTTPMethod.swift in Sources */,
 				DC09ADD42BDE67C5003CF79C /* ApiError.swift in Sources */,
 				DC09ADB62BDAD3A5003CF79C /* IGithubText.swift in Sources */,
+				DCBCFCE82BF51F4A007A9464 /* UserResponse.swift in Sources */,
+				DCBCFCF62BF528E1007A9464 /* GetFollowersViewModel.swift in Sources */,
 				DCE27F272BBF1FCA0065BB50 /* Environment.swift in Sources */,
 				DCE27EF22BBF0D470065BB50 /* IGithubApp.swift in Sources */,
 				DC09ADC52BDAE793003CF79C /* FollowingView.swift in Sources */,
+				DCBCFCF42BF528CE007A9464 /* GetUserViewModel.swift in Sources */,
 				DC09ADBC2BDADC06003CF79C /* CircularImageView.swift in Sources */,
 				DC09ADDD2BDE6CC2003CF79C /* RepositoriesView.swift in Sources */,
+				DCBCFCEE2BF5226E007A9464 /* GetFollowingRepo.swift in Sources */,
 				DC09ADDB2BDE6C11003CF79C /* RepositoriesState.swift in Sources */,
 				DC09ADC72BDE6456003CF79C /* RepositoriesViewModel.swift in Sources */,
 				DCE27F322BC009DB0065BB50 /* RepositoryComponent.swift in Sources */,
+				DCBCFCEC2BF5225F007A9464 /* GetFollowersRepo.swift in Sources */,
+				DCBCFCF22BF527B9007A9464 /* GetFollowingViewModel.swift in Sources */,
+				DCBCFCEA2BF5224F007A9464 /* GetUserRepo.swift in Sources */,
 				DC09ADC32BDAE786003CF79C /* FollowersView.swift in Sources */,
 				DCE27F382BC173350065BB50 /* License.swift in Sources */,
 				DCE27F342BC172ED0065BB50 /* Repository.swift in Sources */,

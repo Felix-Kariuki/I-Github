@@ -9,7 +9,11 @@ import SwiftUI
 
 struct FollowingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment:.leading){
+            IGithubText(text:"Felix Kariuki",
+                        fontFamily:Fonts.nunitoBold,
+                        fontSize: 16)
+        }
     }
 }
 

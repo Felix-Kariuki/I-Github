@@ -43,6 +43,7 @@ struct RepositoriesView: View {
             .onAppear{
                 self.viewModel.getUserRepositories(userName: "Felix-Kariuki")
             }
+            .navigationBarBackButtonHidden(true)
             
         }
     }

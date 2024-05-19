@@ -13,7 +13,7 @@ struct Repository: Codable {
     let id: Int
     let nodeID, name, fullName: String
     let repositoryPrivate: Bool
-    let owner: Owner
+    let owner: UserResponse
     let htmlURL: String
     let description: String?
     let fork: Bool
@@ -50,7 +50,6 @@ struct Repository: Codable {
     let mirrorURL: String?
     let archived, disabled: Bool
     let openIssuesCount: Int
-    let license: License?
     let allowForking, isTemplate, webCommitSignoffRequired: Bool
     let topics: [String]
     let visibility: String
@@ -123,7 +122,6 @@ struct Repository: Codable {
         case mirrorURL = "mirror_url"
         case archived, disabled
         case openIssuesCount = "open_issues_count"
-        case license
         case allowForking = "allow_forking"
         case isTemplate = "is_template"
         case webCommitSignoffRequired = "web_commit_signoff_required"

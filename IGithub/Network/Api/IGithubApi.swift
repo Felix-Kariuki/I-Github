@@ -14,7 +14,7 @@ protocol ApiBuilder {
 }
 
 let BASE_URL = "https://api.github.com"
-let ACCESS_TOKEN = "GITHUB_TOKEN_HERE"
+let ACCESS_TOKEN = "TOKEN_HERE"
 
 enum IGithubApiService {
     case getUserRepos (userName :String)
@@ -44,9 +44,9 @@ extension IGithubApiService:ApiBuilder {
         case .getUser(let userName):
             "/users/\(userName)"
         case .getUserFollowers(let userName):
-            "/users/\(userName)"
+            "/users/\(userName)/followers"
         case .getUserFollowing(let userName):
-            "/users/\(userName)"
+            "/users/\(userName)/following"
         }
     }
     
