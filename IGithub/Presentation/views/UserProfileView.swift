@@ -9,8 +9,7 @@ import SwiftUI
 
 struct UserProfileView: View {
     
-    @StateObject var viewModel =
-    GetUserViewModelImpl(getUserRepo: GetUserRepoImpl())
+    @StateObject var viewModel = GetUserViewModel(getUserRepo: GetUserRepoImpl())
     var userName:String = "Felix-Kariuki"
     
     var body: some View {

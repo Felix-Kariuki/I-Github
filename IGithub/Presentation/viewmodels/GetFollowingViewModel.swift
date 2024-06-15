@@ -8,12 +8,7 @@
 import Foundation
 import Combine
 
-protocol GetFollowingViewModel {
-    func getFollowing(userName:String)
-}
-
-
-class GetFollowingViewModelImpl : ObservableObject,GetFollowingViewModel {
+class GetFollowingViewModel : ObservableObject {
     
     private let getFollowingRepo : GetFollowingRepo
     

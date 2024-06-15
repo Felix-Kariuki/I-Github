@@ -13,8 +13,7 @@ struct RepositoriesView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var username: String = "Felix-Kariuki"
     
-    @StateObject var viewModel =
-    RepositoriesViewModelImpl(getUserRepositories: GetUserRepositoriesRepoImpl())
+    @StateObject var viewModel = RepositoriesViewModel(getUserRepositories: GetUserRepositoriesRepoImpl())
     
     
     var body: some View {

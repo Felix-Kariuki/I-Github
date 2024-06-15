@@ -8,12 +8,7 @@
 import Foundation
 import Combine
 
-protocol GetUserViewModel {
-    func getUser(userName:String)
-}
-
-
-class GetUserViewModelImpl : ObservableObject,GetUserViewModel {
+class GetUserViewModel : ObservableObject {
     
     private let getUserRepo : GetUserRepo
     

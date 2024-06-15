@@ -12,8 +12,7 @@ struct FollowersView: View {
     let userName:String
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    @StateObject var viewModel =
-    GetFollowersViewModelImpl(getFollowingRepo: GetFollowersRepoImpl())
+    @StateObject var viewModel = GetFollowersViewModel(getFollowingRepo: GetFollowersRepoImpl())
     
     var body: some View {
         NavigationView{

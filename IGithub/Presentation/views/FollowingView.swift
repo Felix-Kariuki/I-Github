@@ -13,8 +13,7 @@ struct FollowingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
-    @StateObject var viewModel =
-    GetFollowingViewModelImpl(getFollowingRepo: GetFollowingRepoImpl())
+    @StateObject var viewModel = GetFollowingViewModel(getFollowingRepo: GetFollowingRepoImpl())
     
     var body: some View {
         NavigationView{

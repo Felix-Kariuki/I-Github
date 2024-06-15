@@ -8,15 +8,9 @@
 import Foundation
 import Combine
 
-protocol RepositoriesViewModel {
-    func getUserRepositories(userName:String)
-}
-
-
-
-class RepositoriesViewModelImpl : ObservableObject,RepositoriesViewModel {
+class RepositoriesViewModel : ObservableObject {
     
-    private let getUserRepositoriesRepo : GetUserRepositoriesRepo
+    private var getUserRepositoriesRepo : GetUserRepositoriesRepo
     
     private(set) var userRepos = Repositories()
     private var cancellables = Set<AnyCancellable>()
