@@ -8,15 +8,54 @@
 import SwiftUI
 
 struct FollowingView: View {
+    
+    let userName:String
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    
+    @StateObject var viewModel =
+    GetFollowingViewModelImpl(getFollowingRepo: GetFollowingRepoImpl())
+    
     var body: some View {
-        VStack(alignment:.leading){
-            IGithubText(text:"Felix Kariuki",
-                        fontFamily:Fonts.nunitoBold,
-                        fontSize: 16)
+        NavigationView{
+            Group {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView()
+                    
+                case .failed(let error):
+                    Text("Error ... \(error.localizedDescription)")
+                    
+                case .success( _):
+                    ScrollView {
+                        VStack {
+                            ForEach(viewModel.users, id: \.id){user in
+                                NavigationLink(destination: UserProfileView(userName:userName), label: {
+                                    FollowerComponent(user: user)
+                                })
+                                   
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .onAppear{
+            self.viewModel.getFollowing(userName:userName)
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar{
+            ToolbarItem(placement: .navigationBarLeading) {
+                CustomTitleview(action : {
+                    self.presentationMode.wrappedValue.dismiss()
+                },
+                userName: userName,title: "Following")
+            }
         }
     }
 }
 
 #Preview {
-    FollowingView()
+    FollowingView(userName: "Felix-Kariuki")
 }

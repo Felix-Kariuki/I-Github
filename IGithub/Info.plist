@@ -12,5 +12,7 @@
 		<string>nunito_regular.ttf</string>
 		<string>nunito_semibold.ttf</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

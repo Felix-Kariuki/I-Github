@@ -11,6 +11,7 @@ struct UserProfileView: View {
     
     @StateObject var viewModel =
     GetUserViewModelImpl(getUserRepo: GetUserRepoImpl())
+    var userName:String = "Felix-Kariuki"
     
     var body: some View {
         NavigationView{
@@ -25,29 +26,53 @@ struct UserProfileView: View {
             
         }
         .onAppear{
-            self.viewModel.getUser(userName: "Felix-Kariuki")
+            self.viewModel.getUser(userName: userName)
         }
         .navigationBarBackButtonHidden(true)
      
     }
 }
 
-struct CustomBackButton: View {
+struct CustomReposBackButton: View {
+    
+    let action:() -> Void
+    var userName:String = ""
+    var title:String = ""
+
+
     var body: some View {
-        HStack{
-            Button(action: {
-                // Handle custom back button action
-            }) {
-                Image(systemName: "arrow.left")
-                    .foregroundColor(.blue)
-            }
+       
+            HStack{
+                Button(action: {
+                    // Handle custom back button action
+                    
+                    action()
+                }) {
+                    Image(systemName: "arrow.left")
+                        .foregroundColor(.gray)
+                }
+                Spacer().frame(width: 24)
+                VStack(alignment:.leading,spacing: 4){
+                    IGithubText(text: userName,textColor: .gray)
+                    IGithubText(text: title,
+                                fontFamily: Fonts.nunitoMedium,fontSize:16)
+                }
+                
+                
+                Spacer()
             
-            IGithubText(text: "My text ")
         }
-        
+
     }
 }
-
 #Preview {
-    UserProfileView()
+    CustomReposBackButton(action: {},userName: "Felix-Kariuki",title: "Repositories")
+}
+#Preview {
+    Group{
+        UserProfileView()
+        
+        CustomReposBackButton(action: {},userName: "Felix-Kariuki",title: "Repositories")
+    }
+ 
 }

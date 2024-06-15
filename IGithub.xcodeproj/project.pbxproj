@@ -43,16 +43,10 @@
 		DCE27F032BBF0D490065BB50 /* IGithubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F022BBF0D490065BB50 /* IGithubTests.swift */; };
 		DCE27F0D2BBF0D490065BB50 /* IGithubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F0C2BBF0D490065BB50 /* IGithubUITests.swift */; };
 		DCE27F0F2BBF0D490065BB50 /* IGithubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F0E2BBF0D490065BB50 /* IGithubUITestsLaunchTests.swift */; };
-		DCE27F202BBF16320065BB50 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F1F2BBF16320065BB50 /* NetworkRequest.swift */; };
-		DCE27F232BBF18D20065BB50 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F222BBF18D20065BB50 /* NetworkError.swift */; };
-		DCE27F252BBF1C430065BB50 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F242BBF1C430065BB50 /* HTTPMethod.swift */; };
-		DCE27F272BBF1FCA0065BB50 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F262BBF1FCA0065BB50 /* Environment.swift */; };
-		DCE27F292BBF206A0065BB50 /* NetworkRequestImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F282BBF206A0065BB50 /* NetworkRequestImpl.swift */; };
 		DCE27F322BC009DB0065BB50 /* RepositoryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F312BC009DB0065BB50 /* RepositoryComponent.swift */; };
 		DCE27F342BC172ED0065BB50 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F332BC172ED0065BB50 /* Repository.swift */; };
 		DCE27F362BC172FE0065BB50 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F352BC172FE0065BB50 /* Owner.swift */; };
 		DCE27F382BC173350065BB50 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F372BC173350065BB50 /* License.swift */; };
-		DCE27F3C2BC176F60065BB50 /* URLRequestCurl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE27F3B2BC176F60065BB50 /* URLRequestCurl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,16 +108,10 @@
 		DCE27F082BBF0D490065BB50 /* IGithubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGithubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE27F0C2BBF0D490065BB50 /* IGithubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGithubUITests.swift; sourceTree = "<group>"; };
 		DCE27F0E2BBF0D490065BB50 /* IGithubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGithubUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DCE27F1F2BBF16320065BB50 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		DCE27F222BBF18D20065BB50 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		DCE27F242BBF1C430065BB50 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		DCE27F262BBF1FCA0065BB50 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		DCE27F282BBF206A0065BB50 /* NetworkRequestImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestImpl.swift; sourceTree = "<group>"; };
 		DCE27F312BC009DB0065BB50 /* RepositoryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryComponent.swift; sourceTree = "<group>"; };
 		DCE27F332BC172ED0065BB50 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DCE27F352BC172FE0065BB50 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		DCE27F372BC173350065BB50 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
-		DCE27F3B2BC176F60065BB50 /* URLRequestCurl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestCurl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +282,6 @@
 			children = (
 				DC09ADD22BDE67B5003CF79C /* Error */,
 				DC09ADC82BDE6511003CF79C /* Repository */,
-				DCE27F3A2BC176D70065BB50 /* Extensions */,
 				DCE27F2A2BBF21480065BB50 /* Response */,
 				DCE27F212BBF18BF0065BB50 /* utils */,
 				DCE27F1E2BBF160B0065BB50 /* Api */,
@@ -305,8 +292,6 @@
 		DCE27F1E2BBF160B0065BB50 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				DCE27F1F2BBF16320065BB50 /* NetworkRequest.swift */,
-				DCE27F282BBF206A0065BB50 /* NetworkRequestImpl.swift */,
 				DC09ADD72BDE6851003CF79C /* IGithubApi.swift */,
 			);
 			path = Api;
@@ -315,9 +300,6 @@
 		DCE27F212BBF18BF0065BB50 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				DCE27F222BBF18D20065BB50 /* NetworkError.swift */,
-				DCE27F242BBF1C430065BB50 /* HTTPMethod.swift */,
-				DCE27F262BBF1FCA0065BB50 /* Environment.swift */,
 				DC09ADA02BDACEAC003CF79C /* DecodJson.swift */,
 			);
 			path = utils;
@@ -366,14 +348,6 @@
 				DC09ADDC2BDE6CC2003CF79C /* RepositoriesView.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		DCE27F3A2BC176D70065BB50 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				DCE27F3B2BC176F60065BB50 /* URLRequestCurl.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,18 +489,12 @@
 			files = (
 				DC09ADA42BDAD274003CF79C /* Fonts.swift in Sources */,
 				DCBCFCF02BF5276A007A9464 /* FollowingState.swift in Sources */,
-				DCE27F3C2BC176F60065BB50 /* URLRequestCurl.swift in Sources */,
-				DCE27F232BBF18D20065BB50 /* NetworkError.swift in Sources */,
-				DCE27F292BBF206A0065BB50 /* NetworkRequestImpl.swift in Sources */,
 				DC09ADC12BDAE776003CF79C /* UserProfileView.swift in Sources */,
 				DCE27F362BC172FE0065BB50 /* Owner.swift in Sources */,
-				DCE27F202BBF16320065BB50 /* NetworkRequest.swift in Sources */,
-				DCE27F252BBF1C430065BB50 /* HTTPMethod.swift in Sources */,
 				DC09ADD42BDE67C5003CF79C /* ApiError.swift in Sources */,
 				DC09ADB62BDAD3A5003CF79C /* IGithubText.swift in Sources */,
 				DCBCFCE82BF51F4A007A9464 /* UserResponse.swift in Sources */,
 				DCBCFCF62BF528E1007A9464 /* GetFollowersViewModel.swift in Sources */,
-				DCE27F272BBF1FCA0065BB50 /* Environment.swift in Sources */,
 				DCE27EF22BBF0D470065BB50 /* IGithubApp.swift in Sources */,
 				DC09ADC52BDAE793003CF79C /* FollowingView.swift in Sources */,
 				DCBCFCF42BF528CE007A9464 /* GetUserViewModel.swift in Sources */,

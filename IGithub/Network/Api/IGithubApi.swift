@@ -14,7 +14,7 @@ protocol ApiBuilder {
 }
 
 let BASE_URL = "https://api.github.com"
-let ACCESS_TOKEN = "TOKEN_HERE"
+let ACCESS_TOKEN = "ACCESS_TOKEN_HERE"
 
 enum IGithubApiService {
     case getUserRepos (userName :String)

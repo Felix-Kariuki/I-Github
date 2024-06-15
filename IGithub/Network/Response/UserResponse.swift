@@ -9,44 +9,31 @@ import Foundation
 
 // MARK: - UserResponse
 struct UserResponse: Codable {
-    let login: String? = nil
-    let id: Int? = nil
-    let nodeID: String? = nil
-    let avatarURL: String? = nil
-    let gravatarID: String? = nil
-    let url: String? = nil
-    let   htmlURL: String? = nil
-    let    followersURL: String? = nil
-    let followingURL:String? = nil
-    let     gistsURL:String? = nil
-    let starredURL: String? = nil
-    let subscriptionsURL:String?  = nil
-    let organizationsURL:String? = nil
-    let reposURL: String? = nil
-    let eventsURL: String? = nil
-    let receivedEventsURL: String? = nil
-    let type: String? = nil
-    let siteAdmin: Bool? = nil
-    let name: String? = nil
-    let blog: String? = nil
-    let location:String? = nil
-        let email: String? = nil
-    let bio: String? = nil
-    let twitterUsername: String? = nil
-    let publicRepos:Int? = nil
-    let publicGists:Int? = nil
-    let followers:Int? = nil
-    let following: Int? = nil
-    let createdAt:Date? = nil
-    let updatedAt: Date? = nil
-    let privateGists:Int? = nil
-    let totalPrivateRepos:Int? = nil
-    let ownedPrivateRepos:Int? = nil
-    let diskUsage: Int? = nil
-    let collaborators: Int? = nil
-    let twoFactorAuthentication: Bool? = nil
-    let plan: Plan? = nil
-    
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+    let name: String?
+    let company: JSONNull?
+    let blog: String?
+    let location, email: String?
+    let hireable: JSONNull?
+    let bio, twitterUsername: String?
+    let publicRepos, publicGists, followers, following: Int?
+    let createdAt, updatedAt: Date?
+    let privateGists, totalPrivateRepos, ownedPrivateRepos, diskUsage: Int?
+    let collaborators: Int?
+    let twoFactorAuthentication: Bool?
+    let plan: Plan?
+
     enum CodingKeys: String, CodingKey {
         case login, id
         case nodeID = "node_id"
@@ -65,7 +52,7 @@ struct UserResponse: Codable {
         case receivedEventsURL = "received_events_url"
         case type
         case siteAdmin = "site_admin"
-        case name, blog, location, email, bio
+        case name, company, blog, location, email, hireable, bio
         case twitterUsername = "twitter_username"
         case publicRepos = "public_repos"
         case publicGists = "public_gists"
@@ -80,19 +67,131 @@ struct UserResponse: Codable {
         case twoFactorAuthentication = "two_factor_authentication"
         case plan
     }
+    
+    init(
+            login: String? = nil,
+            id: Int? = nil,
+            nodeID: String? = nil,
+            avatarURL: String? = nil,
+            gravatarID: String? = nil,
+            url: String? = nil,
+            htmlURL: String? = nil,
+            followersURL: String? = nil,
+            followingURL: String? = nil,
+            gistsURL: String? = nil,
+            starredURL: String? = nil,
+            subscriptionsURL: String? = nil,
+            organizationsURL: String? = nil,
+            reposURL: String? = nil,
+            eventsURL: String? = nil,
+            receivedEventsURL: String? = nil,
+            type: String? = nil,
+            siteAdmin: Bool? = nil,
+            name: String? = nil,
+            company: JSONNull? = nil,
+            blog: String? = nil,
+            location: String? = nil,
+            email: String? = nil,
+            hireable: JSONNull? = nil,
+            bio: String? = nil,
+            twitterUsername: String? = nil,
+            publicRepos: Int? = nil,
+            publicGists: Int? = nil,
+            followers: Int? = nil,
+            following: Int? = nil,
+            createdAt: Date? = nil,
+            updatedAt: Date? = nil,
+            privateGists: Int? = nil,
+            totalPrivateRepos: Int? = nil,
+            ownedPrivateRepos: Int? = nil,
+            diskUsage: Int? = nil,
+            collaborators: Int? = nil,
+            twoFactorAuthentication: Bool? = nil,
+            plan: Plan? = nil
+        ) {
+            self.login = login
+            self.id = id
+            self.nodeID = nodeID
+            self.avatarURL = avatarURL
+            self.gravatarID = gravatarID
+            self.url = url
+            self.htmlURL = htmlURL
+            self.followersURL = followersURL
+            self.followingURL = followingURL
+            self.gistsURL = gistsURL
+            self.starredURL = starredURL
+            self.subscriptionsURL = subscriptionsURL
+            self.organizationsURL = organizationsURL
+            self.reposURL = reposURL
+            self.eventsURL = eventsURL
+            self.receivedEventsURL = receivedEventsURL
+            self.type = type
+            self.siteAdmin = siteAdmin
+            self.name = name
+            self.company = company
+            self.blog = blog
+            self.location = location
+            self.email = email
+            self.hireable = hireable
+            self.bio = bio
+            self.twitterUsername = twitterUsername
+            self.publicRepos = publicRepos
+            self.publicGists = publicGists
+            self.followers = followers
+            self.following = following
+            self.createdAt = createdAt
+            self.updatedAt = updatedAt
+            self.privateGists = privateGists
+            self.totalPrivateRepos = totalPrivateRepos
+            self.ownedPrivateRepos = ownedPrivateRepos
+            self.diskUsage = diskUsage
+            self.collaborators = collaborators
+            self.twoFactorAuthentication = twoFactorAuthentication
+            self.plan = plan
+        }
 }
 
 // MARK: - Plan
 struct Plan: Codable {
     let name: String?
     let space, collaborators, privateRepos: Int?
-    
+
     enum CodingKeys: String, CodingKey {
         case name, space, collaborators
         case privateRepos = "private_repos"
     }
 }
 
+// MARK: - Encode/decode helpers
+
+class JSONNull: Codable, Hashable {
+
+    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+            return true
+    }
+
+    public var hashValue: Int {
+            return 0
+    }
+
+    public func hash(into hasher: inout Hasher) {
+            // No-op
+    }
+
+    public init() {}
+
+    public required init(from decoder: Decoder) throws {
+            let container = try decoder.singleValueContainer()
+            if !container.decodeNil() {
+                    throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+            var container = encoder.singleValueContainer()
+            try container.encodeNil()
+    }
+}
 
 extension UserResponse: Hashable {
     static func ==(lhs: UserResponse, rhs: UserResponse) -> Bool {

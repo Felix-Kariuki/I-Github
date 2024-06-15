@@ -9,6 +9,10 @@ import SwiftUI
 
 struct RepositoriesView: View {
     
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var username: String = "Felix-Kariuki"
+    
     @StateObject var viewModel =
     RepositoriesViewModelImpl(getUserRepositories: GetUserRepositoriesRepoImpl())
     
@@ -29,11 +33,9 @@ struct RepositoriesView: View {
                         ScrollView {
                             VStack {
                                 ForEach(viewModel.userRepos, id: \.id){repo in
-                                    NavigationLink{
-                                        //TODO: View to navigate to
-                                    } label: {
+                                    
                                         RepositoryComponent(repo: repo)
-                                    }
+                                
                                 }
                             }
                         }
@@ -41,14 +43,22 @@ struct RepositoriesView: View {
                 }
             }
             .onAppear{
-                self.viewModel.getUserRepositories(userName: "Felix-Kariuki")
+                self.viewModel.getUserRepositories(userName: username)
             }
             .navigationBarBackButtonHidden(true)
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading) {
+                    CustomReposBackButton(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    },userName: username,title: "Repositories")
+                    //CustomBackButton(dismiss: self.dismiss)
+                }
+            }
             
         }
     }
 }
 
 #Preview {
-    RepositoriesView()
+    RepositoriesView(username: "")
 }
